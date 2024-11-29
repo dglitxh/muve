@@ -33,7 +33,8 @@ export default function MovieCard() {
   );
 }
 
-const Cardi = () => {
+export const Cardi = () => {
+  let movie = {};
   return (
     <div class="flex items-center justify-center h-screen bg-[#0d1829] ">
       <div class=" mx-auto bg-white rounded-3xl shadow-xl">
