@@ -1,5 +1,4 @@
 export const getMovies = async () => {
-  const tkn = process.env.REACT_APP_API_TOKEN;
   const key = process.env.REACT_APP_API_KEY;
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}`;
   const options = {
