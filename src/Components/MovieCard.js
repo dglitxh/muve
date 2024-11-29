@@ -1,72 +1,39 @@
 import React from "react";
 
-export default function MovieCard() {
+export const MovieCard = (props) => {
+  let movie = { props };
   return (
-    <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-      <div class="py-3 sm:max-w-xl sm:mx-auto">
-        <div class="bg-white shadow-lg border-gray-100 max-h-80	 border sm:rounded-3xl p-8 flex space-x-8">
-          <div class="h-48 overflow-visible w-1/2">
-            <img
-              class="rounded-3xl shadow-lg"
-              src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1LRLLWGvs5sZdTzuMqLEahb88Pc.jpg"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col w-1/2 space-y-4">
-            <div class="flex justify-between items-start">
-              <h2 class="text-3xl font-bold">Sweet Tooth: El niño ciervo</h2>
-              <div class="bg-yellow-400 font-bold rounded-xl p-2">7.2</div>
-            </div>
-            <div>
-              <div class="text-sm text-gray-400">Series</div>
-              <div class="text-lg text-gray-800">2019</div>
-            </div>
-            <p class=" text-gray-400 max-h-40 overflow-y-hidden">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="flex text-2xl font-bold text-a">$83.90</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export const Cardi = () => {
-  let movie = {};
-  return (
-    <div class="flex items-center justify-center h-screen bg-[#0d1829] ">
-      <div class=" mx-auto bg-white rounded-3xl shadow-xl">
-        <div class="grid rounded-3xl max-w-[360px] shadow-sm bg-slate-100  flex-col">
+    <div className="flex items-center justify-center">
+      <div className=" mx-auto bg-white rounded-3xl shadow-xl">
+        <div className="grid rounded-3xl max-w-[360px] shadow-sm bg-slate-100  flex-col">
           <img
             src="https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_QL75_UX380_CR0,1,380,562_.jpg"
             width="360"
             height="200"
-            class="rounded-t-3xl justify-center h-80 grid object-cover"
+            className="rounded-t-3xl justify-center h-80 grid object-cover"
             alt="movie.title"
           />
 
-          <div class="group p-5 grid z-10">
+          <div className="group p-5 grid z-10">
             <a
               href={`${movie.link}`}
-              class="group-hover:text-cyan-700 font-bold md:text-2xl line-clamp-2"
+              className="group-hover:text-cyan-700 font-bold md:text-2xl line-clamp-2"
             >
               Spider-Man: Across the Spider-Verse
             </a>
-            <span class="text-slate-400 pt-2 font-semibold">(2023)</span>
-            <div class="h-20">
-              <span class="line-clamp-3 py-2 h-20 leading-6 text-sm font-light leading-relaxed">
+            <span className="text-slate-400 pt-2 font-semibold">(2023)</span>
+            <div className="h-20">
+              <span className="line-clamp-3 py-2 h-20 leading-6 text-sm font-light leading-relaxed">
                 Miles Morales catapults across the Multiverse, where he
                 encounters a team of Spider-People charged with protecting its
                 very existence. When the heroes clash on how to handle a new
                 threat, Miles must redefine what it means to be a hero.
               </span>
             </div>
-            <div class=" grid-cols-2 flex group justify-between">
-              <div class="font-black flex flex-col">
-                <span class="text-yellow-500 text-xl">IMDB SCORE</span>
-                <span class="text-3xl flex gap-x-1 items-center group-hover:text-yellow-600">
+            <div className=" grid-cols-2 flex group justify-between">
+              <div className="font-black flex flex-col">
+                <span className="text-yellow-500 text-xl">IMDB SCORE</span>
+                <span className="text-3xl flex gap-x-1 items-center group-hover:text-yellow-600">
                   8.8
                   <svg
                     width="24px"
@@ -79,8 +46,8 @@ export const Cardi = () => {
 
                     <g
                       id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
 
                     <g id="SVGRepo_iconCarrier">
@@ -93,9 +60,9 @@ export const Cardi = () => {
                   </svg>
                 </span>
               </div>
-              <div class="flex flex-col items-end">
-                <div class="h-7" />
-                <span class="text-3xl  font-bold  gap-x-2 text-slate-300">
+              <div className="flex flex-col items-end">
+                <div className="h-7" />
+                <span className="text-3xl  font-bold  gap-x-2 text-slate-300">
                   # 8
                 </span>
               </div>
@@ -106,3 +73,5 @@ export const Cardi = () => {
     </div>
   );
 };
+
+// `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
