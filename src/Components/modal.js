@@ -10,8 +10,9 @@ const style = {
   bgcolor: "background.paper",
   overflow: "scroll",
   border: "1px solid #000",
+  height: "90vh",
   boxShadow: 24,
-  p:1,
+  p: 2,
 };
 
 export default function MyModal(props) {
@@ -23,7 +24,7 @@ export default function MyModal(props) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>{props.comp()}</Box>
+        <Box sx={style} width={{xs: "80vw", sm: "80vw"}}>{props.comp()}</Box>
       </Modal>
     </div>
   );
