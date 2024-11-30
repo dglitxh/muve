@@ -5,8 +5,8 @@ export const Detail = (props) => {
   return (
     <div className="flex justify-center items-center">
       {" "}
-      <section className="text-gray-700 body-font overflow-hidden bg-white">
-        <div className="container py-24 mx-auto">
+      <section className="text-gray-700 body-font bg-white">
+        <div className="container mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
               alt="poster"
@@ -27,7 +27,7 @@ export const Detail = (props) => {
               </div>
               <p className="leading-relaxed">{movie["overview"]}</p>
 
-              <div className="flex my-8 justify-right">
+              <div className="flex mt-8 justify-right">
                 <button
                   onClick={() => {}}
                   className="flex mx-2 text-white bg-blue-500 border-0 py-2 px-2 focus:outline-none hover:bg-blue-600 rounded"
