@@ -21,10 +21,10 @@ export const MovieCard = (props) => {
             <span className="text-slate-400 pt-2 font-semibold">
               {movie["release_date"].split("-")[0]}
             </span>
-            <div className="h-20">
-              <span className="line-clamp-3 py-2 h-20 leading-6 text-sm font-light leading-relaxed">
-                {movie["overview"]}...
-              </span>
+            <div className="h-20 text-left">
+              <p className="py-2 h-20 text-sm font-light ">
+                {movie["overview"].slice(0, 80)}...
+              </p>
             </div>
             <div className=" grid-cols-2 flex group justify-between">
               <div className="font-black flex flex-col">
