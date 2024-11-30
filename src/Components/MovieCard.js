@@ -38,7 +38,7 @@ export const MovieCard = (props) => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
                     <g
                       id="SVGRepo_tracerCarrier"
@@ -70,4 +70,3 @@ export const MovieCard = (props) => {
   );
 };
 
-// `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;

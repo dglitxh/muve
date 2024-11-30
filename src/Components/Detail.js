@@ -3,7 +3,7 @@ import React from "react";
 export const Detail = (props) => {
   const movie = props.movie;
   return (
-    <div class="flex justify-center items-center">
+    <div className="flex justify-center items-center">
       {" "}
       <section className="text-gray-700 body-font overflow-hidden bg-white">
         <div className="container py-24 mx-auto">
