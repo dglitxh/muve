@@ -16,7 +16,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <h1 className="text-3xl py-4 font-bold underline">Muvee List</h1>
       <Catalog movieList={movies}/>
     </div>
   );
