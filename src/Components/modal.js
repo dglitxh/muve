@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
@@ -7,27 +7,22 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
+  border: "1px solid #000",
   boxShadow: 24,
   p: 4,
 };
 
 export default function MyModal(props) {
-
   return (
     <div>
-   
       <Modal
-        open={props.open}
+        open={props.open || false}
         onClose={props.handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          {props.comp}
-        </Box>
+        <Box sx={style}>{props.comp()}</Box>
       </Modal>
     </div>
   );
