@@ -1,13 +1,13 @@
 import React from "react";
 
 export const MovieCard = (props) => {
-  let movie = { props };
+  let movie = props.movie;
   return (
     <div className="flex items-center justify-center">
-      <div className=" mx-auto bg-white rounded-3xl shadow-xl">
-        <div className="grid rounded-3xl max-w-[360px] shadow-sm bg-slate-100  flex-col">
+      <div className=" mx-auto shadow-xl">
+        <div className="grid rounded-3xl max-w-[360px] shadow-sm   flex-col">
           <img
-            src="https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_QL75_UX380_CR0,1,380,562_.jpg"
+            src={`https://image.tmdb.org/t/p/w200/${movie["poster_path"]}`}
             width="360"
             height="200"
             className="rounded-t-3xl justify-center h-80 grid object-cover"
@@ -15,26 +15,22 @@ export const MovieCard = (props) => {
           />
 
           <div className="group p-5 grid z-10">
-            <h3
-             
-              className="group-hover:text-cyan-700 font-bold md:text-2xl line-clamp-2"
-            >
-              Spider-Man: Across the Spider-Verse
+            <h3 className="group-hover:text-cyan-700 font-bold md:text-2xl line-clamp-2">
+              {movie["original_title"]}
             </h3>
-            <span className="text-slate-400 pt-2 font-semibold">(2023)</span>
+            <span className="text-slate-400 pt-2 font-semibold">
+              {movie["release_date"].split("-")[0]}
+            </span>
             <div className="h-20">
               <span className="line-clamp-3 py-2 h-20 leading-6 text-sm font-light leading-relaxed">
-                Miles Morales catapults across the Multiverse, where he
-                encounters a team of Spider-People charged with protecting its
-                very existence. When the heroes clash on how to handle a new
-                threat, Miles must redefine what it means to be a hero.
+                {movie["overview"]}...
               </span>
             </div>
             <div className=" grid-cols-2 flex group justify-between">
               <div className="font-black flex flex-col">
-                <span className="text-yellow-500 text-xl">IMDB SCORE</span>
+                <span className="text-yellow-500 text-xl">Rating</span>
                 <span className="text-3xl flex gap-x-1 items-center group-hover:text-yellow-600">
-                  8.8
+                  {movie["vote_average"].toFixed(1)}
                   <svg
                     width="24px"
                     height="24px"
@@ -63,7 +59,7 @@ export const MovieCard = (props) => {
               <div className="flex flex-col items-end">
                 <div className="h-7" />
                 <span className="text-3xl  font-bold  gap-x-2 text-slate-300">
-                  # 8
+                  # {props.num}
                 </span>
               </div>
             </div>
