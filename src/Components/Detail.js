@@ -1,4 +1,5 @@
-const Detail = () => {
+export const Detail = (props) => {
+  const movie = {props}
   return (
     <div
       id="default-modal"
@@ -90,20 +91,6 @@ const Detail = () => {
                 pour-over, neutra jean shorts keytar banjo tattooed umami
                 cardigan.
               </p>
-              <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-                <div className="flex  items-center">
-                  <span className="mr-3">Quantity</span>
-                  <div className="relative">
-                    <input
-                      className="rounded border appearance-none 
-                      border-gray-400 py-2 focus:outline-none 
-                      focus:border-red-500 text-base pl-3 pr-5"
-                      type="number"
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 UNIT PRICE
               </h2>
@@ -113,7 +100,6 @@ const Detail = () => {
                 </span>
                 <button
                   onClick={() => {
-                    addToCart(movie, movie.id, quantity);
                   }}
                   className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
                 >
