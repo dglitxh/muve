@@ -1,12 +1,9 @@
+import React from "react";
+
 export const Detail = (props) => {
-  const movie = {props}
+  const movie = { props };
   return (
-    <div
-      id="default-modal"
-      tabindex="-1"
-      aria-hidden="true"
-      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
-    >
+    <div class="flex justify-center items-center md:inset-0 h-[calc(100%-1rem)]">
       {" "}
       <section className="text-gray-700 body-font overflow-hidden bg-white">
         <div className="container px-5 py-24 mx-auto">
@@ -99,8 +96,7 @@ export const Detail = (props) => {
                   GH₵ {movie.price}
                 </span>
                 <button
-                  onClick={() => {
-                  }}
+                  onClick={() => {}}
                   className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
                 >
                   Add to Cart
