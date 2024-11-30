@@ -15,12 +15,12 @@ export const MovieCard = (props) => {
           />
 
           <div className="group p-5 grid z-10">
-            <a
-              href={`${movie.link}`}
+            <h3
+             
               className="group-hover:text-cyan-700 font-bold md:text-2xl line-clamp-2"
             >
               Spider-Man: Across the Spider-Verse
-            </a>
+            </h3>
             <span className="text-slate-400 pt-2 font-semibold">(2023)</span>
             <div className="h-20">
               <span className="line-clamp-3 py-2 h-20 leading-6 text-sm font-light leading-relaxed">
